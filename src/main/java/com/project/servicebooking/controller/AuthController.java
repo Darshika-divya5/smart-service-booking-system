@@ -20,7 +20,7 @@ public class AuthController {
     @PostMapping("/login")
     public String login(@RequestParam String username, @RequestParam String password) {
 
-        // 🔥 HARDCODE LOGIN
+        // HARDCODE LOGIN
         if (username.equals("admin") && password.equals("1234")) {
             return jwtUtil.generateToken(username, "ADMIN");
         }

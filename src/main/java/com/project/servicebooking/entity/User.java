@@ -58,13 +58,13 @@ public class User {
 	public void setRole(Role role) {
 		this.role = role;
 	}
-	// 🔥 ADD THIS (BookingService ke liye)
+	// ADD THIS ( For BookingService)
 	public String getName() {
 	    return username; // simple mapping
 	}
 	public void setName(String name) {
 	    this.username = name;
 	}
-    // getters setters
+    
     
 }

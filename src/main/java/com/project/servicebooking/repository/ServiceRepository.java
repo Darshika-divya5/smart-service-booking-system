@@ -11,10 +11,10 @@ import com.project.servicebooking.entity.ServiceEntity;
 
 public interface ServiceRepository extends JpaRepository<ServiceEntity, Long> {
 
-    // 🔥 SEARCH
+    //  SEARCH
     List<ServiceEntity> findByServiceNameContainingIgnoreCase(String name);
 
-    // 🔥 PAGINATION (IMPORTANT)
+    // PAGINATION 
     Page<ServiceEntity> findAll(Pageable pageable);
     
     Page<ServiceEntity> findByServiceNameContainingIgnoreCase(String name, Pageable pageable);

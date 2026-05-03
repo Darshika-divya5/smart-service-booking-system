@@ -16,7 +16,7 @@ public class BookingController {
     @Autowired
     private BookingService service;
 
-    // 🔥 CREATE
+    //  CREATE
     @PostMapping
     public Booking createBooking(
             @RequestParam Long userId,
@@ -26,33 +26,33 @@ public class BookingController {
         return service.createBooking(userId, serviceId, providerId);
     }
 
-    // 🔥 GET ALL
+    //  GET ALL
     @GetMapping
     public List<BookingDTO> getAll() {
         return service.getAllBookings();
     }
 
-    // 🔥 UPDATE
+    //  UPDATE
     @PutMapping("/{id}")
     public Booking updateStatus(@PathVariable Long id,
                                 @RequestParam String status) {
         return service.updateStatus(id, status);
     }
 
-    // 🔥 DELETE
+    //  DELETE
     @DeleteMapping("/{id}")
     public String delete(@PathVariable Long id) {
         service.deleteBooking(id);
         return "Booking deleted";
     }
 
-    // 🔥 FILTER USER
+    // FILTER USER
     @GetMapping("/user/{userId}")
     public List<BookingDTO> getByUser(@PathVariable Long userId) {
         return service.getBookingsByUser(userId);
     }
 
-    // 🔥 FILTER STATUS
+    //  FILTER STATUS
     @GetMapping("/status/{status}")
     public List<BookingDTO> getByStatus(@PathVariable String status) {
         return service.getBookingsByStatus(status);

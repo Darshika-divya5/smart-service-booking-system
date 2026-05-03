@@ -72,8 +72,6 @@ public class Booking {
 	public void setProvider(Provider provider) {
 		this.provider = provider;
 	}
-
-  
     
     
 }

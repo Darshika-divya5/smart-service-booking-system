@@ -37,7 +37,7 @@ public class SecurityConfig {
         return http.build();
     }
 
-    // ✅ YE METHOD BAHAR HONA CHAHIYE (IMPORTANT)
+    
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();

@@ -15,7 +15,7 @@ public class JwtUtil {
     private final String SECRET = "mysecretkeymysecretkeymysecretkey"; // 32+ chars
     private final Key key = Keys.hmacShaKeyFor(SECRET.getBytes());
 
-    // 🔥 THIS METHOD MUST EXIST
+    
     public String generateToken(String username, String role) {
         return Jwts.builder()
                 .setSubject(username)

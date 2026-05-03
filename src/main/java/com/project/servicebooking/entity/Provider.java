@@ -14,6 +14,8 @@ public class Provider {
     private double rating;
 	public Long getId() {
 		return id;
+		
+	//getters setters
 	}
 	public void setId(Long id) {
 		this.id = id;
@@ -37,7 +39,7 @@ public class Provider {
 		this.rating = rating;
 	}
 
-    // getters setters
+    
     
     
 }

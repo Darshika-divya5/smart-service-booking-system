@@ -18,22 +18,22 @@ public class ServiceService {
     @Autowired
     private ServiceRepository serviceRepo;
 
-    // 🔥 CREATE
+    //  CREATE
     public ServiceEntity createService(ServiceEntity service) {
         return serviceRepo.save(service);
     }
 
-    // 🔥 GET ALL
+    //  GET ALL
     public List<ServiceEntity> getAllServices() {
         return serviceRepo.findAll();
     }
 
-    // 🔥 SEARCH (IMPORTANT 🔥)
+    //  SEARCH (IMPORTANT 🔥)
     public List<ServiceEntity> searchServices(String name) {
         return serviceRepo.findByServiceNameContainingIgnoreCase(name);
     }
 
-    // 🔥 DELETE
+    //  DELETE
     public void deleteService(Long id) {
         serviceRepo.deleteById(id);
     }

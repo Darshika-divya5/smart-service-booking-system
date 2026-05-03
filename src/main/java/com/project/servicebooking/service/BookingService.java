@@ -42,7 +42,7 @@ public class BookingService {
         return bookingRepo.save(booking);
     }
 
-    // 🔥 GET ALL BOOKINGS
+    // GET ALL BOOKINGS
     public List<BookingDTO> getAllBookings() {
         List<Booking> bookings = bookingRepo.findAll();
 
@@ -75,12 +75,12 @@ public class BookingService {
         return null;
     }
 
-    // 🔥 DELETE
+    // DELETE
     public void deleteBooking(Long id) {
         bookingRepo.deleteById(id);
     }
 
-    // 🔥 FILTER BY USER
+    // FILTER BY USER
     public List<BookingDTO> getBookingsByUser(Long userId) {
         List<Booking> bookings = bookingRepo.findByUserId(userId);
 
